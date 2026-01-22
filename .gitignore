@@ -1,0 +1,12 @@
+# Base de datos local
+produccion.db
+*.db
+
+# Archivos subidos por los usuarios
+uploads/*
+!uploads/.gitkeep
+
+# Cache de Python y otros
+__pycache__/
+*.pyc
+.DS_Store

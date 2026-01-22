@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jota | Studio Gráfico</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+            <div class="logo-container">
+                <!-- Reemplaza 'logo.png' por el nombre real de tu archivo -->
+                <!-- Ajusta el height (altura) según necesites -->
+                <img src="img/logo_jota.png" alt="Logo Jota" style="height: 250px; width: auto;">
+            </div>
+            
+            <div class="hidden md:flex gap-8 items-center text-base font-bold uppercase tracking-widest">
+                <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition">Portafolio</a>
+                <a href="https://wa.me/573022985621?text=Hola%20Jota%2C%20vi%20tu%20web%20y%20quiero%20cotizar%20un%20servicio" 
+                   class="bg-blue-600 px-6 py-2 rounded-full text-white hover:bg-blue-500 transition shadow-lg shadow-blue-500/20">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hero-title">
+            ARTE FINAL & <br> <span class="text-gradient uppercase">DISEÑO TOTAL.</span>
+        </h1>
+        <p class="hero-subtitle">
+            Desde la etiqueta técnica hasta el video viral. Unimos precisión industrial con creatividad digital.
+        </p>
+    </header>
+
+    <section id="proyectos" class="max-w-7xl mx-auto px-6 mb-6 relative">
+        <div class="carousel-container shadow-2xl">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <a href="services.html?service=diseno" class="carousel-item">
+                    <!-- COLOCA TU FOTO EN LA CARPETA 'img' Y LLÁMALA 'tu_imagen_marca.jpg' -->
+                    <img src="img/diseno_marca.jpg" alt="Diseño Gráfico">
+                    <div class="carousel-overlay">
+                        <h3>Diseño de Marca</h3>
+                        <p class="text-blue-400">Identidad visual y Arte Final pro.</p>
+                    </div>
+                </a>
+                <a href="services.html?service=video" class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&fit=crop" alt="Edición Video">
+                    <div class="carousel-overlay">
+                        <h3>Video & Reels</h3>
+                        <p class="text-pink-400">Edición dinámica para redes.</p>
+                    </div>
+                </a>
+                <a href="services.html?service=impresion" class="carousel-item">
+                    <!-- COLOCA TU FOTO EN LA CARPETA 'img' Y LLÁMALA 'tu_imagen_impresora.jpg' -->
+                    <img src="img/Impresora-de-etiquetas-auto.jpg" alt="Impresión">
+                    <div class="carousel-overlay">
+                        <h3>Impresión Térmica</h3>
+                        <p class="text-cyan-400">Variable y códigos de barras.</p>
+                    </div>
+                </a>
+                <a href="services.html?service=web" class="carousel-item">
+                    <img src="img/top-view-man-working-desk.jpg" alt="Diseño Web">
+                    <div class="carousel-overlay">
+                        <h3>Diseño Web</h3>
+                        <p class="text-purple-400">Experiencias digitales modernas.</p>
+                    </div>
+                </a>
+                <a href="services.html?service=diseno" class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&fit=crop" alt="Packaging">
+                    <div class="carousel-overlay">
+                        <h3>Packaging Creativo</h3>
+                        <p class="text-green-400">Diseño de empaques innovadores.</p>
+                    </div>
+                </a>
+            </div>
+
+            <button onclick="moveCarousel(-1)" class="carousel-btn btn-prev"><i class="fas fa-chevron-left"></i></button>
+            <button onclick="moveCarousel(1)" class="carousel-btn btn-next"><i class="fas fa-chevron-right"></i></button>
+
+            <div class="carousel-dots">
+                <div class="dot active" onclick="goToSlide(0)"></div>
+                <div class="dot" onclick="goToSlide(1)"></div>
+                <div class="dot" onclick="goToSlide(2)"></div>
+                <div class="dot" onclick="goToSlide(3)"></div>
+                <div class="dot" onclick="goToSlide(4)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-black mb-12 text-white">Nuestros Servicios</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="services.html?service=diseno" class="service-card group">
+                <!-- COLOCA TU FOTO EN LA CARPETA 'img' Y LLÁMALA 'servicio_diseno.jpg' -->
+                <img src="img/branding.png" alt="Diseño" class="service-image mb-4 rounded-lg">
+                <i class="fas fa-palette text-blue-400 text-4xl mb-6"></i>
+                <h4>Diseño Gráfico</h4>
+                <p class="summary">Arte Final impecable para cualquier medio impreso.</p>
+                <div class="mt-4 text-blue-400 text-sm font-bold group-hover:translate-x-2 transition-transform">VER DETALLES <i class="fas fa-arrow-right ml-1"></i></div>
+            </a>
+            <a href="services.html?service=impresion" class="service-card group">
+                <!-- COLOCA TU FOTO EN LA CARPETA 'img' Y LLÁMALA 'servicio_impresion.jpg' -->
+                <img src="img/Impresora-termica.webp" alt="Impresión" class="service-image mb-4 rounded-lg">
+                <i class="fas fa-barcode text-purple-400 text-4xl mb-6"></i>
+                <h4>Impresión Variable</h4>
+                <p class="summary">Etiquetado térmico industrial de alta precisión.</p>
+                <div class="mt-4 text-purple-400 text-sm font-bold group-hover:translate-x-2 transition-transform">VER DETALLES <i class="fas fa-arrow-right ml-1"></i></div>
+            </a>
+            <a href="services.html?service=video" class="service-card group">
+                <!-- COLOCA TU FOTO EN LA CARPETA 'img' Y LLÁMALA 'servicio_video.jpg' -->
+                <img src="img/video_ads.png" alt="Video" class="service-image mb-4 rounded-lg">
+                <i class="fas fa-video text-pink-500 text-4xl mb-6"></i>
+                <h4>Video Ads</h4>
+                <p class="summary">Edición y Motion Graphics para alto impacto.</p>
+                <div class="mt-4 text-pink-400 text-sm font-bold group-hover:translate-x-2 transition-transform">VER DETALLES <i class="fas fa-arrow-right ml-1"></i></div>
+            </a>
+            <a href="services.html?service=web" class="service-card group">
+                <!-- COLOCA TU FOTO EN LA CARPETA 'img' Y LLÁMALA 'servicio_web.jpg' -->
+                <img src="img/high-angle-hands-holding-paper.jpg" alt="Web" class="service-image mb-4 rounded-lg">
+                <i class="fas fa-code text-cyan-400 text-4xl mb-6"></i>
+                <h4>Diseño Web</h4>
+                <p class="summary">Experiencias digitales modernas y optimizadas.</p>
+                <div class="mt-4 text-cyan-400 text-sm font-bold group-hover:translate-x-2 transition-transform">VER DETALLES <i class="fas fa-arrow-right ml-1"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="max-w-7xl mx-auto px-6 py-20 relative">
+        <h2 class="text-4xl font-black mb-4 text-white">Portafolio de Trabajos</h2>
+        <p class="text-slate-400 mb-12">Proyectos realizados para clientes de distintas industrias</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop" alt="Proyecto 1">
+                <div class="portfolio-overlay">
+                    <h5>Etiquetas Premium</h5>
+                    <p>Packaging para marcas de cosmética</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Proyecto 2">
+                <div class="portfolio-overlay">
+                    <h5>Campaña Digital</h5>
+                    <p>Video ads para redes sociales</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="Proyecto 3">
+                <div class="portfolio-overlay">
+                    <h5>Rediseño de Marca</h5>
+                    <p>Identidad visual completa</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Proyecto 4">
+                <div class="portfolio-overlay">
+                    <h5>Landing Page</h5>
+                    <p>Diseño y desarrollo web</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=300&fit=crop" alt="Proyecto 5">
+                <div class="portfolio-overlay">
+                    <h5>Producción de Video</h5>
+                    <p>Edición y post-producción</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" alt="Proyecto 6">
+                <div class="portfolio-overlay">
+                    <h5>Impresión Industrial</h5>
+                    <p>Sistema de codes variable</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop" alt="Proyecto 7">
+                <div class="portfolio-overlay">
+                    <h5>Branding Corporativo</h5>
+                    <p>Manual de marca profesional</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="Proyecto 8">
+                <div class="portfolio-overlay">
+                    <h5>Diseño de Etiquetas</h5>
+                    <p>Etiquetado variable inteligente</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&h=300&fit=crop" alt="Proyecto 9">
+                <div class="portfolio-overlay">
+                    <h5>Motion Graphics</h5>
+                    <p>Animaciones para campañas</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop" alt="Proyecto 10">
+                <div class="portfolio-overlay">
+                    <h5>Diseño UX/UI</h5>
+                    <p>Interfaz moderna y funcional</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Proyecto 11">
+                <div class="portfolio-overlay">
+                    <h5>Producción Audiovisual</h5>
+                    <p>Videos comerciales profesionales</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop" alt="Proyecto 12">
+                <div class="portfolio-overlay">
+                    <h5>Sistema de Packaging</h5>
+                    <p>Diseño integral de empaques</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clients-section">
+            <h3 class="text-2xl font-bold mb-8 text-white text-center">Clientes que Confían en Nosotros</h3>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-logo">🏢</div>
+                    <p class="text-sm text-slate-400">Empresa Tech</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🛍️</div>
+                    <p class="text-sm text-slate-400">E-Commerce</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">💄</div>
+                    <p class="text-sm text-slate-400">Cosmética Premium</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🏭</div>
+                    <p class="text-sm text-slate-400">Manufactura</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🍔</div>
+                    <p class="text-sm text-slate-400">Alimentos</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">📱</div>
+                    <p class="text-sm text-slate-400">App Startups</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>¿Tienes una idea en mente?</h2>
+        <a href="https://wa.me/573022985621?text=Hola%20Jota%2C%20vi%20tu%20web%20y%20quiero%20cotizar%20un%20servicio" class="cta-whatsapp">
+            <i class="fab fa-whatsapp"></i> HABLAR CON JOTA
+        </a>
+        <p class="copyright">© 2026 JOTA CREATIVIDAD | COLOMBIA</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
