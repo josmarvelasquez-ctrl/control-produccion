@@ -1131,6 +1131,23 @@ def main():
     st.set_page_config(page_title="Gestión de Producción", layout="wide")
     init_db() 
 
+    # --- DIAGNOSTIC CODE ---
+    st.info("--- INICIO DE DIAGNÓSTICO ---")
+    try:
+        conn_diag = sqlite3.connect('produccion.db', timeout=10)
+        c = conn_diag.cursor()
+        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='proyectos'")
+        if c.fetchone():
+            df_diag = pd.read_sql_query("SELECT * FROM proyectos", conn_diag)
+            st.success(f"✅ DIAGNÓSTICO: ¡Conexión exitosa! La tabla 'proyectos' existe y se encontraron {len(df_diag)} registros (proyectos) en ella.")
+        else:
+            st.warning("🟡 DIAGNÓSTICO: La conexión a la base de datos 'produccion.db' fue exitosa, pero la tabla 'proyectos' NO EXISTE.")
+        conn_diag.close()
+    except Exception as e:
+        st.error(f"❌ DIAGNÓSTICO: ¡ERROR! No se pudo leer la base de datos 'produccion.db'. Razón: {e}")
+    st.info("--- FIN DE DIAGNÓSTICO ---")
+    # --- END DIAGNOSTIC CODE ---
+
     # --- AUTO-LOGIN (MODO DESARROLLO) ---
     # Garantiza que exista el usuario 'admin' y lo loguea automáticamente al recargar (F5).
     conn = sqlite3.connect('produccion.db', timeout=30)
