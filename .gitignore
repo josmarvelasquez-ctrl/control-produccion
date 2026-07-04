@@ -5,6 +5,8 @@ produccion.db
 # Archivos subidos por los usuarios
 uploads/*
 !uploads/.gitkeep
+audios_carteras/uploads/*
+!audios_carteras/uploads/.gitkeep
 
 # Cache de Python y otros
 __pycache__/
